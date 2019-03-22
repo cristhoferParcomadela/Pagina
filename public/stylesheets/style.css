@@ -1,8 +1,333 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+/*-----------------------------------------------------
+MENU NAVAR
+------------------------------------------------------*/
+
+#img1{
+  width: 20%;
+  height: 15%;
+  border-radius: 50%;
+}
+.vaner{
+  border: white;
+  padding-top: 10%;
+  padding-bottom: 5%;
+  background-color: white;
+  width: 100%;
+  font-size: 35px;
+}
+
+
+.titulo{
+  color: black;
+  font-family: 'Baloo Chettan', cursive;
+  font-size: 60px;
+
+}
+.nav{
+  
+  color: black;
+  font-family: 'Baloo Chettan', cursive;
+  font-size: 15px;
+}
+#nav1{
+  color:black;
+  width: 100%;
+  
+}
+
+
+/*------------------------------------------------------
+HEADER
+--------------------------------------------------------*/
+
+main{
+  z-index: 1;
+  position: relative;
+
+}
+.texto1{
+  color: black;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  text-align: center;
+  text-size-adjust: 10px;
+  font-family: 'Baloo Chettan', cursive;
+}
+
+footer{
+  padding: 15px;
+}
+/*--------------------------------------------------------
+FOOTER
+----------------------------------------------------------*/
+.cajacookies {
+  
+  background-color: white;
+  color: black;
+  padding: 10px;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  margin-bottom: 0px;
+  position: relative;
+  top: 0px;
+  width: 100%;
+  border: #00B7FF solid
+}
+
+#cajacookies button {
+  color: black;
+}
+
+/*--------------------------------------------------------
+MAIN
+----------------------------------------------------------*/
+
+
+.di {
+  padding: 0;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: space-around;
+  position: relative;
+  width: 100%;
+  z-index: -1
+}
+.di section {
+  width: 100%;
+  height: 800px;
+  flex: 1;
+  display: flex;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  z-index: -1;
+}
+.di section:nth-child(1) .image {
+  background-image: url("../images/mountain.jpg");
+}
+.di section:nth-child(2) .image {
+  background-image: url("../images/blanco.gif");
+}
+.di section:nth-child(3) .image {
+  background-image: url("../images/tabla.jpg");
+}
+.di section:nth-child(4) .image {
+  background-image: url("../images/blanco.gif");
+}
+.di section:nth-child(5) .image {
+  background-image: url("../images/snowboarder.jpg");
+}
+.di section:nth-child(6) .image {
+  background-image: url("../images/blanco.gif");
+}
+
+
+
+.container-fluid section .image {
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 500;
+  opacity: 1;
+}
+.di section .stuff {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100%;
+  width: 100%;
+  max-width: 70%;
+  justify-content: center;
+  text-align: center;
+  z-index: 1000;
+  color: black;
+  margin: 0 auto;
+  font-size: 26px;
+  position: relative;
+}
+
+
+.di section .stuff h1 {
+  margin: 0px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.sub-titulo{
+  color: black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  text-size-adjust: 15px;
+  font-family: 'Baloo Chettan', cursive;
+
+}
+
+.d-block{
+  position: relative;
+  display: inline;
+}
+
+.sombra{
+  width: 100%;
+  border-radius:  15%  ;
+  box-shadow: 10px 10px 5px grey;
+
+}
+
+.carousel-item{
+  width: 95%;
+  position: relative;
+  box-shadow: 10px 10px 5px grey;
+  border: blue solid;
+  border-radius: 13%;
+
+}
+.d-block{
+  width: 100%;
+  border-radius: 13%;
+}
+
+
+
+/* FORMULARIO*/
+
+.contactos{
+  padding-top: 10%;
+}
+
+
+
+.mail-message-area{
+  width:100%;
+}
+
+.mail-message{
+  width: 100%;
+  background:rgba(255,255,255, 0.8) !important;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  transition: all 0.7s;
+  margin:0 auto;
+  border-radius: 0;
+}
+
+.not-visible-message{
+  height:0px;
+  opacity: 0;
+}
+
+.visible-message{
+  height:auto;
+  opacity: 1;
+}
+
+/* Input Styles */
+
+.form{
+  width: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background:rgb(193, 211, 231);
+  border:1px solid rgba(0, 0, 0, 0.075);
+  margin-bottom:25px;
+  color:#727272 !important;
+  font-size:13px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  border-radius: 5px;
+}
+
+.form:hover{
+  border:1px solid #8BC3A3;
+}
+
+.form:focus{
+  color: rgb(57, 67, 121);
+  outline: none;
+  border:1px solid rgb(102, 165, 207);
+}
+
+.textarea{
+  height: 200px;
+  max-height: 200px;
+  max-width: 100%;
+}
+
+/* Generic Button Styles */
+
+.button{
+  background:rgb(105, 150, 202);
+  display: block;
+  width: 10%;
+  position: relative;
+  border-radius:3px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align:center;
+  font-size:0.8em;
+ 
+}
+
+.button:hover{
+  background:rgb(137, 155, 231);
+  color:white;
+}
+
+/* Send Button Styles */
+
+.form-btn{
+  width:180px;
+  display: block;
+  height: auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color:#fff;
+  background:rgb(105, 150, 202);
+  border:none;
+  border-radius:3px;
+  outline: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  margin:auto;
+
+}
+
+.form-btn:hover{
+  background:#111;
+  color: white;
+  border:none;
+}
+
+.form-btn:active{
+  opacity: 0.9;
+}
+input {
+  position: relative;
+  z-index: 9999;
 }

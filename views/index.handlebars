@@ -1,0 +1,231 @@
+<main>
+    <section class="container-fluid di">
+        <section>
+            <div class="image" data-type="background" data-speed="2"></div>
+            <div data-type="content">
+            </div>
+        </section>
+
+        <section>
+            <div class="image" data-type="background" data-speed="7"></div>
+            <div class="stuff" data-type="content">
+                <div class="sub-titulo">
+                    <h1>Deporte</h1>
+                </div>
+                <div class="sombra">
+                    <div class="texto1">
+                        El snowboard es un deporte de invierno que cada vez cuenta con más aficionados, casi tantos como
+                        esquiadores. Si aún no te has animado a deslizarte en la nieve y quieres hacerlo sobre una
+                        tabla,
+                        tal vez te surjan una serie de dudas acerca de cómo practicar snowboard por primera vez. Por
+                        cierto,
+                        a quien hace esquí le costará menos iniciarse en el snowboarding.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="image" data-type="background" data-speed="6"></div>
+            <div data-type="content"></div>
+        </section>
+
+        <section>
+            <div class=" image" data-type="background" data-speed="5"></div>
+            <div class=" stuff" data-type="content">
+                <div class=" sub-titulo">
+                    <h1>Nosotros</h1>
+                </div>
+                <div class="sombra">
+                    <div class="texto1">
+                        <p>Párrafo. Haz clic para editar y agregar tu propio texto. Es fácil. Haz clic en Editar Texto o
+                            doble clic aquí para agregar tu contenido y cambiar la fuente. Puedes arrastrar y soltar
+                            este
+                            texto donde sea que quieras en tu página. En este espacio puedes contar tu historia y
+                            permitir a
+                            tus usuarios saber más sobre ti.</p>
+
+                        <p>Este es un buen espacio para extenderte sobre tu compañía y servicios. Puedes usar este
+                            espacio
+                            para incorporar más detalles sobre tu empresa. Escribe sobre tu personal y los servicios que
+                            ofreces. Cuéntales a los visitantes la historia sobre cómo se te ocurrió la idea de tu
+                            negocio y
+                            diles qué te diferencia de tus competidores. Haz que tu empresa se destaque y muestra a tus
+                            visitantes quién eres.</p>
+                    </div>
+                </div>
+        </section>
+
+        <section>
+            <div class="image" data-type="background" data-speed="3"></div>
+            <div data-type="content"></div>
+        </section>
+
+        <section>
+            <div class="image" data-type="background" data-speed="4"></div>
+            <div class="stuff" data-type="content">
+                <div class="sub-titulo">
+                    <h1>Galeria</h1>
+                </div>
+                <div class="texto1">
+                    El snowboard te conecta con la naturaleza y de los mejores paisajes
+                </div>
+
+        </section>
+    </section>
+
+    <section class="container-fluid">
+        <div id="carouselExampleIndicators" class="carousel slide row justify-content-center" data-ride="carousel">
+            <ol class="carousel-indicators row justify-content-center">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner row justify-content-center">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="../images/snowboarder.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item row justify-content-center">
+                    <img class="d-block w-100" src="../images/snowboarder4.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item row justify-content-center">
+                    <img class="d-block w-100" src="../images/snowboarder6.jpg" alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // makes the parallax elements
+        function parallaxIt() {
+
+            // create variables
+            var $fwindow = $(window);
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            // on window scroll event
+            $fwindow.on('scroll resize', function () {
+                scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            });
+
+            // for each of content parallax element
+            $('[data-type="content"]').each(function (index, e) {
+                var $contentObj = $(this);
+                var fgOffset = parseInt($contentObj.offset().top);
+                var yPos;
+                var speed = ($contentObj.data('speed') || 1);
+
+                $fwindow.on('scroll resize', function () {
+                    yPos = fgOffset - scrollTop / speed;
+
+                    $contentObj.css('top', yPos);
+                });
+            });
+
+            // for each of background parallax element
+            $('[data-type="background"]').each(function () {
+                var $backgroundObj = $(this);
+                var bgOffset = parseInt($backgroundObj.offset().top);
+                var yPos;
+                var coords;
+                var speed = ($backgroundObj.data('speed') || 0);
+
+                $fwindow.on('scroll resize', function () {
+                    yPos = - ((scrollTop - bgOffset) / speed);
+                    coords = '40% ' + yPos + 'px';
+
+                    $backgroundObj.css({ backgroundPosition: coords });
+                });
+            });
+
+            // triggers winodw scroll for refresh
+            $fwindow.trigger('scroll');
+        };
+
+        parallaxIt();
+    </script>
+</main>
